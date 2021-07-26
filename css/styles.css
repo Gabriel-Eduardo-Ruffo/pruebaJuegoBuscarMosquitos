@@ -106,10 +106,10 @@ section content{
 
 /******CONTENIDO DEL OBJETO A BUSCAR********/
 .content_objects{
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(255, 0, 0);
-    background-color: rgba(255, 0, 0, 0.4);
+    /*border-style: solid;*/
+    /*border-width: 2px;*/
+    /*border-color: rgb(255, 0, 0);*/
+    background-color: rgba(255, 0, 0, 0.0);
 }
 #objeto-1{
     position: absolute;
