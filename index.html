@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <title>Juego-Dengue</title>
+    <!--STYLES-->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--FONTS-->
+</head>
+<body id='body'>
+    <header>
+        <ul>
+            <li><button id='btn_Play'>Iniciar</button></li>
+            <li>
+                <div id='titleGame'>
+                    <h1>NIVEL 1</h1>
+                </div>
+            </li>
+            <li><button id='btn_exit'><a href='/'>Salir</a></button></li>
+        </ul>
+    </header>
+    <!-------------------------------Contenedor del juego----------------------------------------------------------->
+    <section>       
+        <nav>
+            <div>
+                <img id='clock' src="./img/clock.png" />
+                <div class='timer'>
+                    <span id='timeMinutes'>00</span><span>:</span><span id='timeSeconds'>00</span>
+                </div>
+                    <!--Boton de ayuda-->
+                <button id="btnHelp">Ayuda</button>
+            </div>
+        </nav>
+        <content>           
+            <div id='content_imageGames'>                
+                <!-- Lupa -->
+                <div class="magnify">                    
+                    <!-- tamanio imagen lupa -->
+                    <div class="large"></div>                    
+                    <!-- Imagenes del juego tamanio original -->
+                    <img class="small" src="./img/game/plantilla1.jpg" id='img_Game'/>                   
+                </div>
+                <!--Se crearan por javascript la cantidad de mosquitos o lugares necesarios-->
+                <span class='content_objects' id='objeto-1'></span>
+                <span class='content_objects' id='objeto-2'></span>
+                <span class='content_objects' id='objeto-3'></span>
+                <span class='content_objects' id='objeto-4'></span>
+                <span class='content_objects' id='objeto-5'></span>
+                <span class='content_objects' id='objeto-6'></span>
+                <span class='content_objects' id='objeto-7'></span>
+                <span class='content_objects' id='objeto-8'></span>
+                <span class='content_objects' id='objeto-9'></span>
+            </div>
+        </content>
+        <span id='lupa'>
+            <img src="./img/lupa.png" alt="lupa" />
+        </span>
+        <aside id='col_objects_finding'>
+            <!--Se crearan por javascript la cantidad de mosquitos o lugares encontrados y se mostraran en la barra-->
+            <span class='content_Find_Object'><img id='object_Find-1' src="./img/game/mosquito.png" /></span>
+            <span class='content_Find_Object'><img id='object_Find-2' src="./img/game/mosquito.png" /></span>
+            <span class='content_Find_Object'><img id='object_Find-3' src="./img/game/mosquito.png" /></span>
+            <span class='content_Find_Object'><img id='object_Find-4' src="./img/game/mosquito.png" /></span>
+            <span class='content_Find_Object'><img id='object_Find-5' src="./img/game/mosquito.png" /></span>
+            <span class='content_Find_Object'><img id='object_Find-6' src="./img/game/mosquito.png" /></span>
+            <span class='content_Find_Object'><img id='object_Find-7' src="./img/game/mosquito.png" /></span>
+            <span class='content_Find_Object'><img id='object_Find-8' src="./img/game/mosquito.png" /></span>
+            <span class='content_Find_Object'><img id='object_Find-9' src="./img/game/mosquito.png" /></span>
+        </aside>
+    </section>
+    <!--popup para mostrar informacion-->
+    <div id="popUpGame" class="modal">
+        <!-- Contenido -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id='messageHelp'>Mensaje ayuda</p>
+          </div>
+    </div> 
+    <!--Efecto blur para mostrar popups-->
+    <div id='blurBackground'></div>
+    <!--Mensaje inicio del juego-->
+    <div id="initMessageGame" class='messageModal'>
+        <div class='content-message-game'>
+            <img id='marcoMessage' src="./img/game/marco.png" alt="marco" />
+            <div class='message-game'>
+                <p id='message-game-p'>prueba</p>
+            </div>
+            <button class='buttonUI' id="btnContinue">Empezar</button>         
+        </div>       
+    </div>
+    <!--Mensaje final del juego-->
+    <div id="EndMessageGame" class='messageModal'>
+        <div>
+
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------>
+    <footer>
+        <p>Copyrigth &copy; 2021</p>
+    </footer>
+
+    <!--Carga los script del juego-->
+    <script src="./js/lupa.js"></script>
+    <script src="./js/time.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/modal.js"></script>
+</body>
+</html>
