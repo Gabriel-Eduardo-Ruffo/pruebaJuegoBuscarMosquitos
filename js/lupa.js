@@ -66,8 +66,8 @@ document.addEventListener("mousemove",function(e){
             //Se toma de referencia la imagen original (no ampliada)
             //se calcula su tamanio y se le resta el tamanio de la imagen ampliada. 
             //El 1.5 es la velocidad que tendra de movimiento la lupa con respecto a la imagen ampliada.
-            var rx = (Math.round(((mx/imgBase.width*native_width)*1.5) - (imgZoomDiv.clientWidth)+50)*-1);
-            var ry = (Math.round(((my/imgBase.height*native_height)*1.5) - (imgZoomDiv.clientHeight)+50)*-1);
+            var rx = (Math.round(((mx/imgBase.width*native_width)*2) - (imgZoomDiv.clientWidth)+50)*-1);
+            var ry = (Math.round(((my/imgBase.height*native_height)*2) - (imgZoomDiv.clientHeight)+50)*-1);
             var bgp = rx + "px " + ry + "px";
 
             //posicion el centro de la lupa (vidrio) con el puntero
