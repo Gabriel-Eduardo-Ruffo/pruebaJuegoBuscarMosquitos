@@ -187,7 +187,7 @@ window.addEventListener('load', function(){
 
 
 
-
+//contenedor de div para clickear mosquito
     let imageFind1 = document.querySelector('#objeto-1');
     let imageFind2 = document.querySelector('#objeto-2');
     let imageFind3 = document.querySelector('#objeto-3');
@@ -197,7 +197,17 @@ window.addEventListener('load', function(){
     let imageFind7 = document.querySelector('#objeto-7');
     let imageFind8 = document.querySelector('#objeto-8');
     let imageFind9 = document.querySelector('#objeto-9');
-    
+//imagen de mosquito que se mostrara al ser encontrado (en la plantilla del juego)
+    let imageMosquito1 = document.querySelector('#img_mosquito1');
+    let imageMosquito2 = document.querySelector('#img_mosquito2');
+    let imageMosquito3 = document.querySelector('#img_mosquito3');
+    let imageMosquito4 = document.querySelector('#img_mosquito4');
+    let imageMosquito5 = document.querySelector('#img_mosquito5');
+    let imageMosquito6 = document.querySelector('#img_mosquito6');
+    let imageMosquito7 = document.querySelector('#img_mosquito7');
+    let imageMosquito8 = document.querySelector('#img_mosquito8');
+    let imageMosquito9 = document.querySelector('#img_mosquito9');
+//imagen del mosquito encontrado (contador de mosquito)    
     let imageCount1 = document.querySelector('#object_Find-1');
     let imageCount2 = document.querySelector('#object_Find-2');
     let imageCount3 = document.querySelector('#object_Find-3');
@@ -213,6 +223,7 @@ window.addEventListener('load', function(){
     imageFind1.addEventListener('click',function(e){       
         if(mosquito1 == false){
             imageCount1.src = "./img/game/mosquitoEncontrado.png";
+            imageMosquito1.src = "./img/game/mosquito2.png";
             mosquitoCount++;
             mosquito1 = true;
             //console.log('objeto1 encontrado');
@@ -223,6 +234,7 @@ window.addEventListener('load', function(){
     imageFind2.addEventListener('click',function(e){
         if(mosquito2 == false){
             imageCount2.src = "./img/game/mosquitoEncontrado.png";
+            imageMosquito2.src = "./img/game/mosquito2.png";
             mosquitoCount++;
             mosquito2 = true;
             //console.log('objeto2 encontrado');
@@ -232,6 +244,7 @@ window.addEventListener('load', function(){
     imageFind3.addEventListener('click',function(e){
         if(mosquito3 == false){
             imageCount3.src = "./img/game/mosquitoEncontrado.png";
+            imageMosquito3.src = "./img/game/mosquito2.png";
             mosquitoCount++;
             mosquito3 = true;
             //console.log('objeto3 encontrado');
@@ -241,6 +254,7 @@ window.addEventListener('load', function(){
     imageFind4.addEventListener('click',function(e){
         if(mosquito4 == false){
             imageCount4.src = "./img/game/mosquitoEncontrado.png";
+            imageMosquito4.src = "./img/game/mosquito2.png";
             mosquitoCount++;
             mosquito4 = true;
             //console.log('objeto4 encontrado');
@@ -250,6 +264,7 @@ window.addEventListener('load', function(){
     imageFind5.addEventListener('click',function(e){
         if(mosquito5 == false){
             imageCount5.src = "./img/game/mosquitoEncontrado.png";
+            imageMosquito5.src = "./img/game/mosquito2.png";
             mosquitoCount++;
             mosquito5 = true;
             //console.log('objeto5 encontrado');
@@ -259,6 +274,7 @@ window.addEventListener('load', function(){
     imageFind6.addEventListener('click',function(e){
         if(mosquito6 == false){
             imageCount6.src = "./img/game/mosquitoEncontrado.png";
+            imageMosquito6.src = "./img/game/mosquito2.png";
             mosquitoCount++;
             mosquito6 = true;
             //console.log('objeto6 encontrado');
@@ -268,6 +284,7 @@ window.addEventListener('load', function(){
     imageFind7.addEventListener('click',function(e){
         if(mosquito7 == false){
             imageCount7.src = "./img/game/mosquitoEncontrado.png";
+            imageMosquito7.src = "./img/game/mosquito2.png";
             mosquitoCount++;
             mosquito7 = true;
             //console.log('objeto7 encontrado');
@@ -277,6 +294,7 @@ window.addEventListener('load', function(){
     imageFind8.addEventListener('click',function(e){
         if(mosquito8 == false){
             imageCount8.src = "./img/game/mosquitoEncontrado.png";
+            imageMosquito8.src = "./img/game/mosquito2.png";
             mosquitoCount++;
             mosquito8 = true;
             //console.log('objeto8 encontrado');
@@ -286,6 +304,7 @@ window.addEventListener('load', function(){
     imageFind9.addEventListener('click',function(e){
         if(mosquito9 == false){
             imageCount9.src = "./img/game/mosquitoEncontrado.png";
+            imageMosquito9.src = "./img/game/mosquito2.png";
             mosquitoCount++;
             mosquito9 = true;
             //console.log('objeto9 encontrado');
