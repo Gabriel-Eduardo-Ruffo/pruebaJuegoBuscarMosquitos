@@ -27,6 +27,10 @@ iframe{
     background-color: rgba(170, 196, 201, 0.24);
     height:85%;/*alto del iframe que contiene la encuesta del form login*/
 }
+/*********************************/
+.audios{
+    display: none
+}
 
 /*************HEADER**************/
 header{

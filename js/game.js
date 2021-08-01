@@ -5,6 +5,12 @@
 //let innerFormGame = formGame.parentNode;
 
 /****************************************************************************************************/
+//audios y musica del juego
+let musicGame;
+let selectGame;
+let celebrationWinGame;
+
+/****************************************************************************************************/
 //variables para mostrar distintos mensajes del juego (el juego consta de 2 niveles)
 
 let messageIni   = "¡Juntos podemos prevenir las enfermedades transmitidas por mosquitos!"+"<br>"+"Detectá dónde están los Aedes aegypti y encontrá sus posibles criaderos para construir entre todos un Mundo Sano.";
@@ -209,6 +215,16 @@ window.addEventListener('load', function(){
 
 
     //-----------Inicializamos las variables del juego----------------------------------------------------
+    //musica y audio del juego
+    musicGame = document.getElementById("music");
+    selectGame = document.getElementById("click");
+    celebrationWinGame = document.getElementById("celebrate");
+    //musicGame.play();    
+    //selectGame.play();
+    //celebrationWinGame.play();
+    musicGame.volume = 0.2;
+
+
     //cantidad de juegos (para saber cuando se jugaron todos los juegos)
     totalNumGames = refImageBase.length; 
 
@@ -269,6 +285,9 @@ window.addEventListener('load', function(){
             gameOn = true;// seteamos que comenzo el juego
             startGame = true;// seteamos que comenzo el juego
             actualGame = 1;
+            musicGame.pause();//pausar
+            musicGame.currentTime = 0;//desde el inicio del audio
+            musicGame.play();
             //verificamos si ya paso por el mensaje inicial o comienza a jugar
             showModal(messageLvl1);      
             resetCount();//resetea el contador de la cantidad de mosquitos encontrados
@@ -286,6 +305,9 @@ window.addEventListener('load', function(){
             imageCount1.src = "./img/game/mosquitoEncontrado.png";
             mosquitoCount++;
             mosquito1 = true;
+            selectGame.pause();//pausar
+            selectGame.currentTime = 0;//desde el inicio del audio
+            selectGame.play();
             //console.log('objeto1 encontrado');
             checkEndGame()
         }       
@@ -296,6 +318,9 @@ window.addEventListener('load', function(){
             imageCount2.src = "./img/game/mosquitoEncontrado.png";
             mosquitoCount++;
             mosquito2 = true;
+            selectGame.pause();//pausar
+            selectGame.currentTime = 0;//desde el inicio del audio
+            selectGame.play();
             //console.log('objeto2 encontrado');
             checkEndGame()
         }        
@@ -305,6 +330,9 @@ window.addEventListener('load', function(){
             imageCount3.src = "./img/game/mosquitoEncontrado.png";
             mosquitoCount++;
             mosquito3 = true;
+            selectGame.pause();//pausar
+            selectGame.currentTime = 0;//desde el inicio del audio
+            selectGame.play();
             //console.log('objeto3 encontrado');
             checkEndGame()
         }        
@@ -314,6 +342,9 @@ window.addEventListener('load', function(){
             imageCount4.src = "./img/game/mosquitoEncontrado.png";
             mosquitoCount++;
             mosquito4 = true;
+            selectGame.pause();//pausar
+            selectGame.currentTime = 0;//desde el inicio del audio
+            selectGame.play();
             //console.log('objeto4 encontrado');
             checkEndGame()
         }        
@@ -323,6 +354,9 @@ window.addEventListener('load', function(){
             imageCount5.src = "./img/game/mosquitoEncontrado.png";
             mosquitoCount++;
             mosquito5 = true;
+            selectGame.pause();//pausar
+            selectGame.currentTime = 0;//desde el inicio del audio
+            selectGame.play();
             //console.log('objeto5 encontrado');
             checkEndGame()
         } 
@@ -332,6 +366,9 @@ window.addEventListener('load', function(){
             imageCount6.src = "./img/game/mosquitoEncontrado.png";
             mosquitoCount++;
             mosquito6 = true;
+            selectGame.pause();//pausar
+            selectGame.currentTime = 0;//desde el inicio del audio
+            selectGame.play();
             //console.log('objeto6 encontrado');
             checkEndGame()
         } 
@@ -341,6 +378,9 @@ window.addEventListener('load', function(){
             imageCount7.src = "./img/game/mosquitoEncontrado.png";
             mosquitoCount++;
             mosquito7 = true;
+            selectGame.pause();//pausar
+            selectGame.currentTime = 0;//desde el inicio del audio
+            selectGame.play();
             //console.log('objeto7 encontrado');
             checkEndGame()
         } 
@@ -350,6 +390,9 @@ window.addEventListener('load', function(){
             imageCount8.src = "./img/game/mosquitoEncontrado.png";
             mosquitoCount++;
             mosquito8 = true;
+            selectGame.pause();//pausar
+            selectGame.currentTime = 0;//desde el inicio del audio
+            selectGame.play();
             //console.log('objeto8 encontrado');
             checkEndGame()
         } 
@@ -359,6 +402,9 @@ window.addEventListener('load', function(){
             imageCount9.src = "./img/game/mosquitoEncontrado.png";
             mosquitoCount++;
             mosquito9 = true;
+            selectGame.pause();//pausar
+            selectGame.currentTime = 0;//desde el inicio del audio
+            selectGame.play();
             //console.log('objeto9 encontrado');
             checkEndGame();
         } 
@@ -473,12 +519,20 @@ window.addEventListener('load', function(){
             setTimeout(function () {
                 if(actualGame == 1){
                     console.log ('pasa al siguiente nivel');
+                    celebrationWinGame.pause();//pausar
+                    celebrationWinGame.currentTime = 0;//desde el inicio del audio
+                    celebrationWinGame.play();
                     actualGame = 2;
                     showModal(messageLvl2);//gano el primer nivel
                     initGame();
                     console.log ('mosquitoCount' +mosquitoCount +"-----"+"actualGame "+actualGame);
                 }else if (actualGame == 2){
                     console.log ('win');
+                    celebrationWinGame.pause();//pausar
+                    celebrationWinGame.currentTime = 0;//desde el inicio del audio
+                    celebrationWinGame.play();
+                    musicGame.pause();//pausar
+                    musicGame.currentTime = 0;//desde el inicio del audio                   
                     actualGame = 1;
                     showModal(messageWin);//fin del juego mensaje de que gano los 2 niveles
                     resetCount();

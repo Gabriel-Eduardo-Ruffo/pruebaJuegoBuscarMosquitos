@@ -74,6 +74,8 @@ function startClock(){
                     gameOver = true;// se cambia de estado esta variable para que termine el juego. (la logica del juego para que pierda es por el tiempo transcurrido)
                     actualGame = 1;//seteamos para que no vuelva a empezar del nivel 2
                     resetCounterTime();
+                    musicGame.pause();//pausar
+                    musicGame.currentTime = 0;//desde el inicio del audio
                     init();
                     startGame = false;
                     showModal(messageLost2);
