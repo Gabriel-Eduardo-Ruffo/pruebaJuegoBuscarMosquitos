@@ -44,19 +44,19 @@
                     <img class="small" src="./img/game/plantilla1.jpg" id='img_Game'/>                   
                 </div>
                 <!--Se crearan por javascript la cantidad de mosquitos o lugares necesarios-->
-                <span class='content_objects' id='objeto-1'><img  id='img_mosquito1'/></span>
-                <span class='content_objects' id='objeto-2'><img  id='img_mosquito2'/></span>
-                <span class='content_objects' id='objeto-3'><img  id='img_mosquito3'/></span>
-                <span class='content_objects' id='objeto-4'><img  id='img_mosquito4'/></span>
-                <span class='content_objects' id='objeto-5'><img  id='img_mosquito5'/></span>
-                <span class='content_objects' id='objeto-6'><img  id='img_mosquito6'/></span>
-                <span class='content_objects' id='objeto-7'><img  id='img_mosquito7'/></span>
-                <span class='content_objects' id='objeto-8'><img  id='img_mosquito8'/></span>
-                <span class='content_objects' id='objeto-9'><img  id='img_mosquito9'/></span>
+                <span class='content_objects' id='objeto-1'></span>
+                <span class='content_objects' id='objeto-2'></span>
+                <span class='content_objects' id='objeto-3'></span>
+                <span class='content_objects' id='objeto-4'></span>
+                <span class='content_objects' id='objeto-5'></span>
+                <span class='content_objects' id='objeto-6'></span>
+                <span class='content_objects' id='objeto-7'></span>
+                <span class='content_objects' id='objeto-8'></span>
+                <span class='content_objects' id='objeto-9'></span>
             </div>
         </content>
         <span id='lupa'>
-            <img src="./img/lupa.png" alt="lupa" />
+            <img id="imgLupa" src="./img/lupa.png" alt="lupa" />
         </span>
         <aside id='col_objects_finding'>
             <!--Se crearan por javascript la cantidad de mosquitos o lugares encontrados y se mostraran en la barra-->
@@ -80,14 +80,13 @@
           </div>
     </div> 
     <!--Efecto blur para mostrar popups-->
-
     <div id='blurBackground'></div>
 
     <!--Mensaje inicio del juego-->
 
-    <div id="initMessageGame" class='messageModal'>
+    <div id="messageGame" class='messageModal'>
         <div class='content-message-game'>
-            <img id='marcoMessage' src="./img/game/marco.png" alt="marco" />           
+            <img id='marcoMessage' src="./img/marco.png" alt="marco" />           
             <p id='message-game-p'>prueba</p>
             <button class='buttonUI' id="btnContinue">Empezar</button> 
         </div>      
@@ -101,6 +100,15 @@
     </div>
     <!--Boton de ayuda-->
     <button id="btnHelp">?</button>
+    <!-------------------------------Contenedor del FORM----------------------------------------------------------->
+<!--
+    <div class="formLogin">
+        <div class="backGroundForm"></div>
+        <div class="contentForm">
+            <iframe id='formGame' src="https://docs.google.com/forms/d/e/1FAIpQLSeeQ0OLNVrQDsAK7J9y31HDS0G47xrkM-vWLr2PPXkGcI9bdA/viewform?embedded=true" scrolling="no" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        </div>
+    </div>
+-->
     <!------------------------------------------------------------------------------------------------------------------------>
     <footer>
         <p>Copyrigth &copy; 2021</p>

@@ -4,20 +4,20 @@ var modal = document.getElementById("popUpGame");
 // boton de ayuda, el que despliega el modal
 var btn = document.getElementById("btnHelp");
 
-// Get the <span> element that closes the modal
+// referencia al boton cerrar
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
+// apretamos abrir el modal
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+// apretamos cerrar el modal
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// cuando apretamos en cualquier lugar por fuera del modal
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";

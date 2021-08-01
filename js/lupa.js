@@ -1,31 +1,5 @@
-    //creamos variables para mover la imagen
-    let lupaX=0;
-    let lupaY=0;
-    //referencia al div que contiene la imagen
-    let lupa;
-    //referencia del div que contiene la imagen ampliada
-    let imgZoomDiv;
-    //referencia del div que contiene la imagen original
-    let imgBase;
-    //referencia a la imagen del juego
-    let imageGame;
-  
-    let native_width = 0;
-    let native_height = 0;
-
-//cuando este hecha la logica del juego. armar llamado a esta funcion que tiene que ser reemplazada para que se cargue solo cuando lo indique
-//la logica del juego
-window.onload = function(){
-    //referencia al div que contiene la imagen
-    lupa = document.querySelector('#lupa');
-    //referencia del div que contiene la imagen ampliada
-    imgZoomDiv = document.querySelector(".large");
-    //referencia del div que contiene la imagen original
-    imgBase = document.querySelector(".small");
-    //referencia a la imagen del juego
-    imageGame= document.querySelector('#img_Game');
-}
-    //Si se mueve el mouse sobre el div magnify
+//Las referencias de las variables que hace este script estan en game.js
+//Si se mueve el mouse sobre el div magnify
 document.addEventListener("mousemove",function(e){
 
     //cuando entramos a la imagen.
@@ -47,8 +21,8 @@ document.addEventListener("mousemove",function(e){
         var mx = e.pageX - imageGame.getBoundingClientRect().left;
         var my = e.pageY - imageGame.getBoundingClientRect().top;
 
-        //Verificica que este dentro de la imagen para mostrar o no la lupa
-        if(mx < imageGame.getBoundingClientRect().width-5 && my < imageGame.getBoundingClientRect().height-5 && mx > 5 && my > 5)
+        //Verificica que este dentro de la imagen para mostrar o no la lupa y que estemos jugando y no pausado o mostrando un cartel
+        if((mx < imageGame.getBoundingClientRect().width-5 && my < imageGame.getBoundingClientRect().height-5 && mx > 5 && my > 5) && gameOn && startGame)
         {
             document.getElementById('body').style.cursor = 'none';//ocultamos
             lupa.style.display = 'block';//mostramos la lupa
@@ -66,8 +40,8 @@ document.addEventListener("mousemove",function(e){
             //Se toma de referencia la imagen original (no ampliada)
             //se calcula su tamanio y se le resta el tamanio de la imagen ampliada. 
             //El 1.5 es la velocidad que tendra de movimiento la lupa con respecto a la imagen ampliada.
-            var rx = (Math.round(((mx/imgBase.width*native_width)*2) - (imgZoomDiv.clientWidth)+50)*-1);
-            var ry = (Math.round(((my/imgBase.height*native_height)*2) - (imgZoomDiv.clientHeight)+50)*-1);
+            var rx = (Math.round(((mx/imgBase.width*native_width)*1) - (imgZoomDiv.clientWidth)+50)*-1);
+            var ry = (Math.round(((my/imgBase.height*native_height)*1) - (imgZoomDiv.clientHeight)+50)*-1);
             var bgp = rx + "px " + ry + "px";
 
             //posicion el centro de la lupa (vidrio) con el puntero
