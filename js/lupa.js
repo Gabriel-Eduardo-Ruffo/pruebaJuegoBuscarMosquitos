@@ -28,9 +28,7 @@ document.addEventListener("mousemove",function(e){
             lupa.style.display = 'block';//mostramos la lupa
             imgZoomDiv.style.display = 'block';
         }else{
-            document.getElementById('body').style.cursor = '';//mostramos
-            lupa.style.display = 'none';//ocultamos la lupa
-            imgZoomDiv.style.display = 'none';
+
         }
 
         //Si esta visible el contenedor large....Se muestra la imagen ampliada
